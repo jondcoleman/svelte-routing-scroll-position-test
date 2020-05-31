@@ -9,15 +9,15 @@
   export let url = "";
 </script>
 
-<Router url="{url}">
+<Router {url}>
   <nav>
     <NavLink to="/">Home</NavLink>
     <NavLink to="about">About</NavLink>
     <NavLink to="blog">Blog</NavLink>
   </nav>
   <div>
-    <Route path="about" component="{About}" />
-    <Route path="blog/*" component="{Blog}" />
-    <Route path="/" component="{Home}" />
+    <Route path="about" component={About} />
+    <Route path="blog/:article" component={Blog} />
+    <Route path="/" component={Home} />
   </div>
 </Router>
